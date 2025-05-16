@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa Paranormal</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_LrW3NdogLXxPviXObbrFVpoCwaLoXBc&callback=inicializarMapa" async defer></script>
+</head>
+<body>
+  <div id="mapa" style="height:500px;width:100%;"></div>
+
+  <script>
+    function inicializarMapa() {
+      var centro = { lat: -33.4489, lng: -70.6693 }; // Santiago, Chile
+      var mapa = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 10,
+        center: centro
+      });
+
+      // Ejemplo de marcador para un avistamiento paranormal
+      var marcador = new google.maps.Marker({
+        position: centro,
+        map: mapa,
+        title: "Avistamiento Fantasmal"
+      });
+    }
+  </script>
+</body>
+</html>
